@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCalendar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Agendinha" 
+        Width="1024" 
+        Height="576" 
+        MinWidth="640"
+        MinHeight="480"
+        Background="White" 
+        FontFamily="Segoe UI Light">
+    
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
 
+        <Grid Grid.Column="0" Margin="12" ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="LightGray">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        </Grid>
+        
     </Grid>
+    
 </Window>
