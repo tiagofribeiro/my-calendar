@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,16 @@ namespace WPFCalendar
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void AddEvent_Click(object sender, RoutedEventArgs e)
+        {
+            Trace.WriteLine("Adiconar Evento");
+        }
+
+        private void AddTask_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
