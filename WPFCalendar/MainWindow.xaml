@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCalendar"
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:components="clr-namespace:WPFCalendar.Components"
         mc:Ignorable="d"
         Title="Agendinha" 
         Width="1024"
@@ -27,7 +28,7 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
-                <Calendar Grid.Row="0" />
+                <components:Calendar />
 
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
@@ -47,7 +48,7 @@
 
                     <DockPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Button Content="Pomodoro" Width="72" Height="28" Margin="10,0,10,0" />
-                        <Image gif:ImageBehavior.AnimatedSource="/Assets/Images/ring.gif" gif:ImageBehavior.AutoStart="True"  Margin="52,0,0,0"/>
+                        <Image gif:ImageBehavior.AnimatedSource="/ring.gif" gif:ImageBehavior.AutoStart="True"  Margin="52,0,0,0"/>
                     </DockPanel>
 
                 </Grid>
@@ -61,21 +62,23 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition />
             </Grid.RowDefinitions>
-
-            <StackPanel Grid.Row="0" Margin="12">
-                <DockPanel Margin="0,0,0,10">
-                    <Label Content="Título:" Padding="0,5,10,5" />
-                    <TextBox Height="16" />
-                </DockPanel>
-                <StackPanel Margin="0,0,0,10">
-                    <Label Content="Descrição:" Padding="0,5,5,5" />
-                    <RichTextBox Height="100"/>
+            
+            <ScrollViewer>
+                <StackPanel Grid.Row="0" Margin="12">
+                    <DockPanel Margin="0,0,0,10">
+                        <Label Content="Título:" Padding="0,5,10,5" />
+                        <TextBox Height="16" />
+                    </DockPanel>
+                    <StackPanel Margin="0,0,0,10">
+                        <Label Content="Descrição:" Padding="0,5,5,5" />
+                        <RichTextBox Height="100"/>
+                    </StackPanel>
+                    <DockPanel Margin="0,0,0,10">
+                        <Label Content="Título:" Padding="0,5,10,5" />
+                        <TextBox Height="16" />
+                    </DockPanel>
                 </StackPanel>
-                <DockPanel Margin="0,0,0,10">
-                    <Label Content="Título:" Padding="0,5,10,5" />
-                    <TextBox Height="16" />
-                </DockPanel>
-            </StackPanel>
+            </ScrollViewer>
 
             <GridSplitter Grid.Row="1"
               HorizontalAlignment="Stretch"
