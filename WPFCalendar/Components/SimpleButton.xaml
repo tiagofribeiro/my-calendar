@@ -1,4 +1,5 @@
-﻿<UserControl x:Class="WPFCalendar.Components.Calendar"
+﻿<UserControl x:Class="WPFCalendar.Components.SimpleButton"
+             x:Name="root"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +7,10 @@
              xmlns:local="clr-namespace:WPFCalendar.Components"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Calendar />
-    </Grid>
+    <Button 
+        Content="{Binding ButtonText, ElementName=root}"
+        Width="92" 
+        Height="44" 
+        Margin="10,0,10,0"/>
+
 </UserControl>

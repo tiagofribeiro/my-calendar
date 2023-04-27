@@ -16,11 +16,21 @@ using System.Windows.Shapes;
 namespace WPFCalendar.Components
 {
     /// <summary>
-    /// Interação lógica para Calendar.xaml
+    /// Interação lógica para SimpleButton.xaml
     /// </summary>
-    public partial class Calendar : UserControl
+    public partial class SimpleButton : UserControl
     {
-        public Calendar()
+        public string ButtonText
+        {
+            get { return (string)GetValue(ButtonTextProperty); }
+            set { SetValue(ButtonTextProperty, value); }
+        }
+
+        public static readonly DependencyProperty ButtonTextProperty = 
+            DependencyProperty.Register("ButtonText", typeof(string), typeof(SimpleButton), new PropertyMetadata("ButtonText"));
+
+
+        public SimpleButton()
         {
             InitializeComponent();
         }

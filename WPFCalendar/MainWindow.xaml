@@ -21,6 +21,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
+        <!--Coluna da esquerda-->
         <Border BorderThickness="12">
             <Grid Grid.Column="0" ShowGridLines="True">
                 <Grid.RowDefinitions>
@@ -28,8 +29,10 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
+                <!--Calendário-->
                 <components:Calendar />
 
+                <!--Área dos botões-->
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto" />
@@ -37,18 +40,21 @@
                         <ColumnDefinition Width="2*" />
                     </Grid.ColumnDefinitions>
 
+                    <!--Botões de evento-->
                     <DockPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button x:Name="AddEvent" Content="Evento" Width="72" Height="28" Margin="10,0,10,0" Click="AddEvent_Click" />
-                        <Button x:Name="AddTask" Content="Tarefa" Width="72" Height="28" Margin="10,0,10,0" Click="AddTask_Click" />
+                        <components:SimpleButton ButtonText="Evento" />
+                        <components:SimpleButton ButtonText="Tarefa" />
                     </DockPanel>
 
+                    <!--Cronômetro-->
                     <DockPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Button Content="Cronometro" Width="72" Height="28" Margin="10,0,10,0" />
                     </DockPanel>
 
+                    <!--Pomodoro-->
                     <DockPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Button Content="Pomodoro" Width="72" Height="28" Margin="10,0,10,0" />
-                        <Image gif:ImageBehavior.AnimatedSource="/ring.gif" gif:ImageBehavior.AutoStart="True"  Margin="52,0,0,0"/>
+                        <Image gif:ImageBehavior.AnimatedSource="/ring.gif" gif:ImageBehavior.AutoStart="True"  Margin="52,0,0,0" Height="52"/>
                     </DockPanel>
 
                 </Grid>
@@ -56,13 +62,15 @@
             </Grid>
         </Border>
 
+        <!--Coluna da direita-->
         <Grid Grid.Column="1" Background="LightGray">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition Height="auto" />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            
+
+            <!--Criar/Editar-->
             <ScrollViewer>
                 <StackPanel Grid.Row="0" Margin="12">
                     <DockPanel Margin="0,0,0,10">
@@ -80,6 +88,7 @@
                 </StackPanel>
             </ScrollViewer>
 
+            <!--Splitter-->
             <GridSplitter Grid.Row="1"
               HorizontalAlignment="Stretch"
               VerticalAlignment="Center"
@@ -87,6 +96,7 @@
               ShowsPreview="True"
               Height="5" />
 
+            <!--Lista de tarefas-->
             <StackPanel Grid.Row="2" Background="MistyRose" />
 
 

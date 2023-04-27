@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPFCalendar
+namespace WPFCalendar.Components
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interação lógica para Cronometro.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Cronometro : UserControl
     {
-        public MainWindow()
+        public Cronometro()
         {
             InitializeComponent();
-        }
-
-        private void AddTask_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
