@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="Assets\Images\" />
-    <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>

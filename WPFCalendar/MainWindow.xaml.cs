@@ -26,7 +26,12 @@ namespace WPFCalendar
             InitializeComponent();
         }
 
-        private void AddTask_Click(object sender, RoutedEventArgs e)
+        private void AddEvent(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddTask(object sender, RoutedEventArgs e)
         {
 
         }

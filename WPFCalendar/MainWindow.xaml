@@ -42,8 +42,8 @@
 
                     <!--Botões de evento-->
                     <DockPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <components:SimpleButton ButtonText="Evento" />
-                        <components:SimpleButton ButtonText="Tarefa" />
+                        <components:SimpleButton ButtonText="Evento" ButtonClick="AddEvent" />
+                        <components:SimpleButton ButtonText="Tarefa" ButtonClick="AddTask"/>
                     </DockPanel>
 
                     <!--Cronômetro-->

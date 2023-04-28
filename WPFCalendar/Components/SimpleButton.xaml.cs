@@ -20,19 +20,45 @@ namespace WPFCalendar.Components
     /// </summary>
     public partial class SimpleButton : UserControl
     {
+        // DependencyProperty - propriedades dinâmicas (dependentes) de um controle
+        public static readonly DependencyProperty ButtonTextProperty = DependencyProperty.Register(
+                name: "ButtonText",
+                propertyType: typeof(string),
+                ownerType: typeof(SimpleButton),
+                typeMetadata: new PropertyMetadata("ButtonText"));
+
+        // Propriedades
         public string ButtonText
         {
             get { return (string)GetValue(ButtonTextProperty); }
             set { SetValue(ButtonTextProperty, value); }
         }
 
-        public static readonly DependencyProperty ButtonTextProperty = 
-            DependencyProperty.Register("ButtonText", typeof(string), typeof(SimpleButton), new PropertyMetadata("ButtonText"));
+        // RoutedEvents - eventos dinâmicos (propagados para a árvore de elementos) de um controle
+        public static readonly RoutedEvent ButtonClickEvent = EventManager.RegisterRoutedEvent(
+            name: "ButtonClick",
+            routingStrategy: RoutingStrategy.Bubble,
+            handlerType: typeof(RoutedEventHandler),
+            ownerType: typeof(SimpleButton));
+
+        // Handler
+        public event RoutedEventHandler ButtonClick
+        {
+            add { AddHandler(ButtonClickEvent, value); }
+            remove { RemoveHandler(ButtonClickEvent, value); }
+        }
 
 
+        // Construtor
         public SimpleButton()
         {
             InitializeComponent();
+        }
+
+        // Click
+        private void OnButtonClick(object sender, RoutedEventArgs e)
+        {
+            RaiseEvent(new RoutedEventArgs(ButtonClickEvent));
         }
     }
 }

@@ -11,6 +11,7 @@
         Content="{Binding ButtonText, ElementName=root}"
         Width="92" 
         Height="44" 
-        Margin="10,0,10,0"/>
+        Margin="10,0,10,0"
+        Click="OnButtonClick"/>
 
 </UserControl>
