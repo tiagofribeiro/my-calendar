@@ -11,10 +11,11 @@ namespace WPFCalendar.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string? Description { get; set; }
+        public List<string>? Subtasks { get; set; }
         public TaskType Type { get; set; }
-        public DateTime Created { get; set; } = DateTime.Now;
+        public Notifications Notifications { get; set; }
         public DateTime? Deadline { get; set; }
+        public DateTime Created { get; set; } = DateTime.Now;
 
     }
 }

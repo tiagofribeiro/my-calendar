@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace WPFCalendar.Models.enums
 {
-    public enum TaskType
+    public enum Notifications
     {
-        Personal,
-        Profissional,
-        Health,
-        House,
-        Pet,
-        Gov
+        None,
+        OneHour,
+        ThreeHours,
+        OneDay,
+        ThreeDays,
+        OneWeek,
+        OneMonth
     }
 }

@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace WPFCalendar.Models.enums
 {
-    public enum TaskType
+    public enum EventType
     {
-        Personal,
-        Profissional,
-        Health,
-        House,
-        Pet,
-        Gov
+        Birthdays,
+        Concerts,
+        Meetings,
+        Travels,
+        Other
     }
 }
