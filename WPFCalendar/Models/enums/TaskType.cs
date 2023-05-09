@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WPFCalendar.Models.enums
 {
+    /// <summary>
+    /// Tipos possíveis de tarefas
+    /// </summary>
     public enum TaskType
     {
         Personal,

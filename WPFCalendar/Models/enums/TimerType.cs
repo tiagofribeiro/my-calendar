@@ -7,16 +7,11 @@ using System.Threading.Tasks;
 namespace WPFCalendar.Models.enums
 {
     /// <summary>
-    /// Agendamentos possíveis de notificação
+    /// Tipos de timer
     /// </summary>
-    public enum Notifications
+    public enum TimerType
     {
-        None,
-        OneHour,
-        ThreeHours,
-        OneDay,
-        ThreeDays,
-        OneWeek,
-        OneMonth
+        Pomodoro,
+        Chronometer
     }
 }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WPFCalendar.Models.enums
 {
+    /// <summary>
+    /// Tipos possíveis de evento
+    /// </summary>
     public enum EventType
     {
         Birthdays,
