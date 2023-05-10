@@ -16,12 +16,12 @@ namespace WPFCalendar.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public List<string>? Subtasks { get; set; }
+        public List<Notifications>? Notifications { get; set; }
         public TaskType Type { get; set; }
-        public Notifications Notifications { get; set; }
         public DateTime? Deadline { get; set; }
         public DateTime Created { get; set; }
 
-        public Task(int id, string name, List<string>? subtasks, TaskType type, Notifications notifications , DateTime? deadline)
+        public Task(int id, string name, List<string>? subtasks, List<Notifications>? notifications, TaskType type, DateTime? deadline)
         {
             Id = id;
             Name = name;
