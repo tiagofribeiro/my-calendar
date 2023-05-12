@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace WPFCalendar.Components
 {
     /// <summary>
-    /// Interação lógica para Chronometer.xam
+    /// Interação lógica para componente de Cronômetro.
     /// </summary>
     public partial class Chronometer : UserControl
     {

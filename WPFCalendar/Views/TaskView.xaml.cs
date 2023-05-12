@@ -12,17 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFCalendar.ViewModels;
 
-namespace WPFCalendar.Components
+namespace WPFCalendar.Views
 {
     /// <summary>
-    /// Interação lógica para componente de Calendário.
+    /// Interação lógica para TaskView.xam
     /// </summary>
-    public partial class Calendar : UserControl
+    public partial class TaskView : UserControl
     {
-        public Calendar()
+        public TaskView()
         {
             InitializeComponent();
+            this.DataContext = new TasksViewModel();
         }
     }
 }
