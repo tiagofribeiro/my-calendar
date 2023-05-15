@@ -28,12 +28,14 @@ namespace WPFCalendar
 
         private void AddEvent(object sender, RoutedEventArgs e)
         {
-
+            Debug.WriteLine("Adicionar evento!");
+            Debug.WriteLine(sender);
         }
 
         private void AddTask(object sender, RoutedEventArgs e)
         {
-
+            Debug.WriteLine("Adicionar tarefa!");
+            Debug.WriteLine(sender);
         }
     }
 }
