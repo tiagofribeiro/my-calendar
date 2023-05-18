@@ -7,19 +7,19 @@
              xmlns:local="clr-namespace:WPFCalendar.Components"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Border 
-        MinHeight="64"
-        MinWidth="120"
-        Padding="16"
-        Background="#FFE4E0B7"
-        CornerRadius="20"
-        BorderThickness="1">
-        <Grid>
-            <StackPanel>
-                <TextBlock Text="Huge ass title here" FontSize="28"/>
-                <GridSplitter />
-                <TextBlock Text="Small description of the task/event/anyway this card can be used"/>
-            </StackPanel>
-        </Grid>
-    </Border>
+    <UserControl.ContentTemplate>
+        <DataTemplate>
+            <Border 
+                MinHeight="64"
+                MinWidth="120"
+                Padding="16"
+                Background="#FFE4E0B7"
+                CornerRadius="20"
+                BorderThickness="12">
+                <Grid>
+                    <ContentPresenter Content="{TemplateBinding Content}"/>
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </UserControl.ContentTemplate>
 </UserControl>

@@ -10,11 +10,11 @@
     <ItemsControl ItemsSource="{Binding Tasks}">
         <ItemsControl.ItemTemplate>
             <DataTemplate>
-                <Grid Height="100" Margin="10" Background="LightBlue">
-                    <components:Card>
-                        <Border BorderThickness="10">
-                            <StackPanel VerticalAlignment="Center">
-                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+                <components:Card>
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}" FontSize="20"/>
+                            <Expander>
                                 <ListView ItemsSource="{Binding Subtasks}">
                                     <ListView.ItemTemplate>
                                         <DataTemplate>
@@ -25,10 +25,10 @@
                                         </DataTemplate>
                                     </ListView.ItemTemplate>
                                 </ListView>
-                            </StackPanel>
-                        </Border>
-                    </components:Card>
-                </Grid>
+                            </Expander>
+                        </StackPanel>
+                    </Grid>
+                </components:Card>
             </DataTemplate>
         </ItemsControl.ItemTemplate>
     </ItemsControl>

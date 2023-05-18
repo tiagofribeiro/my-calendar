@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace WPFCalendar.Components
 {
     /// <summary>
-    /// Interação lógica para Card.xam
+    /// Interação lógica para componente base de Card.
     /// </summary>
     public partial class Card : UserControl
     {

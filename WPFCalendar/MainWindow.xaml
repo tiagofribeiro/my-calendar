@@ -99,9 +99,7 @@
 
             <!--Lista de tarefas-->
             <ScrollViewer Grid.Row="2">
-                <StackPanel Background="MistyRose" >
-                    <views:TaskView />
-                </StackPanel>
+                <views:TaskView />
             </ScrollViewer>
 
 

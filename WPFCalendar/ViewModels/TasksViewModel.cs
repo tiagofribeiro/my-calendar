@@ -41,6 +41,41 @@ namespace WPFCalendar.ViewModels
                     },
                     type: TaskType.Personal,
                     deadline: DateTime.Now
+                ),
+                new Models.Task(
+                    id: 2,
+                    name: "Tarefa de teste 2",
+                    subtasks: new List<string>()
+                    {
+                        "Subtarefa 3",
+                        "Subtarefa 4",
+                        "Subtarefa 5",
+                        "Subtarefa 6",
+                        "Subtarefa 7",
+                    },
+                    notifications: new List<Notifications>()
+                    {
+                        Notifications.ThreeHours,
+                        Notifications.OneDay
+                    },
+                    type: TaskType.Personal,
+                    deadline: DateTime.Now
+                ),
+                new Models.Task(
+                    id: 3,
+                    name: "Tarefa de teste 3",
+                    subtasks: new List<string>()
+                    {
+                        "Subtarefa 8",
+                        "Subtarefa 9"
+                    },
+                    notifications: new List<Notifications>()
+                    {
+                        Notifications.ThreeHours,
+                        Notifications.OneDay
+                    },
+                    type: TaskType.Personal,
+                    deadline: DateTime.Now
                 )
             };
 
