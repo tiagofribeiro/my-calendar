@@ -13,7 +13,7 @@
                 MinHeight="64"
                 MinWidth="120"
                 Padding="16"
-                Background="#FFE4E0B7"
+                Background="{Binding CardColor, ElementName=root}"
                 CornerRadius="20"
                 BorderThickness="12">
                 <Grid>

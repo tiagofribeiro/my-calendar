@@ -24,7 +24,7 @@ namespace WPFCalendar.ViewModels
 
         public TasksViewModel()
         {
-            Tasks = new ObservableCollection<Models.Task> 
+            Tasks = new ObservableCollection<Models.Task>
             {
                 new Models.Task(
                     id: 1,
@@ -58,8 +58,8 @@ namespace WPFCalendar.ViewModels
                         Notifications.ThreeHours,
                         Notifications.OneDay
                     },
-                    type: TaskType.Personal,
-                    deadline: DateTime.Now
+                    type: TaskType.Health,
+                    deadline: DateTime.Parse("20/05/2023 19:00")
                 ),
                 new Models.Task(
                     id: 3,
@@ -74,12 +74,13 @@ namespace WPFCalendar.ViewModels
                         Notifications.ThreeHours,
                         Notifications.OneDay
                     },
-                    type: TaskType.Personal,
-                    deadline: DateTime.Now
+                    type: TaskType.Gov,
+                    deadline: DateTime.Parse("15/06/2023")
                 )
             };
 
             SelectedTask = Tasks.Count > 0 ? Tasks.FirstOrDefault() : null;
+            Debug.WriteLine(SelectedTask.Name);
         }
     }
 }

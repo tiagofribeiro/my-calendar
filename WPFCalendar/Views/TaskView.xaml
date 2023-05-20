@@ -11,23 +11,21 @@
         <ItemsControl.ItemTemplate>
             <DataTemplate>
                 <components:Card>
-                    <Grid>
-                        <StackPanel>
-                            <TextBlock Text="{Binding Name}" FontSize="20"/>
-                            <Expander>
-                                <ListView ItemsSource="{Binding Subtasks}">
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate>
-                                            <DockPanel>
-                                                <CheckBox />
-                                                <TextBlock Text="{Binding}" />
-                                            </DockPanel>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
-                            </Expander>
-                        </StackPanel>
-                    </Grid>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}" FontSize="20"/>
+                        <Expander>
+                            <ListView ItemsSource="{Binding Subtasks}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <DockPanel>
+                                            <CheckBox />
+                                            <TextBlock Text="{Binding}" />
+                                        </DockPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Expander>
+                    </StackPanel>
                 </components:Card>
             </DataTemplate>
         </ItemsControl.ItemTemplate>
