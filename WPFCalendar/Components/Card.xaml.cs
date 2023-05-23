@@ -39,7 +39,6 @@ namespace WPFCalendar.Components
         public Card()
         {
             InitializeComponent();
-
         }
     }
 }

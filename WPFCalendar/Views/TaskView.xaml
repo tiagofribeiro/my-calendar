@@ -7,10 +7,11 @@
              xmlns:components="clr-namespace:WPFCalendar.Components"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <ItemsControl ItemsSource="{Binding Tasks}">
+
+    <ItemsControl Name="TaskItems" ItemsSource="{Binding Tasks}">
         <ItemsControl.ItemTemplate>
             <DataTemplate>
-                <components:Card>
+                <components:Card Loaded="Card_Loaded">
                     <StackPanel>
                         <TextBlock Text="{Binding Name}" FontSize="20"/>
                         <Expander>

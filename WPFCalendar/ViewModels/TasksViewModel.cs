@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Windows.Media;
 using WPFCalendar.Functions;
 using WPFCalendar.Models.enums;
 
@@ -80,7 +81,6 @@ namespace WPFCalendar.ViewModels
             };
 
             SelectedTask = Tasks.Count > 0 ? Tasks.FirstOrDefault() : null;
-            Debug.WriteLine(SelectedTask.Name);
         }
     }
 }
