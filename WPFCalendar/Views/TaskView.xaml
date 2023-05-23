@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="WPFCalendar.Views.TaskView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFCalendar.Views"
+             xmlns:components="clr-namespace:WPFCalendar.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <ItemsControl Name="TaskItems" ItemsSource="{Binding Tasks}">
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <components:Card Loaded="Card_Loaded">
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}" FontSize="20"/>
+                        <Expander>
+                            <ListView ItemsSource="{Binding Subtasks}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <DockPanel>
+                                            <CheckBox />
+                                            <TextBlock Text="{Binding}" />
+                                        </DockPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Expander>
+                    </StackPanel>
+                </components:Card>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+
+</UserControl>
