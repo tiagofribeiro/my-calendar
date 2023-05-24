@@ -30,10 +30,10 @@ namespace WPFCalendar.ViewModels
                 new Models.Task(
                     id: 1,
                     name: "Tarefa de teste",
-                    subtasks: new List<string>()
+                    subtasks: new ObservableCollection<Models.Substask>()
                     {
-                        "Subtarefa 1",
-                        "Subtarefa 2"
+                        new Models.Substask() { Name="Subtarefa 1", IsChecked=true },
+                        new Models.Substask() { Name="Subtarefa 2", IsChecked=false }
                     },
                     notifications: new List<Notifications>()
                     {
@@ -46,13 +46,13 @@ namespace WPFCalendar.ViewModels
                 new Models.Task(
                     id: 2,
                     name: "Tarefa de teste 2",
-                    subtasks: new List<string>()
+                    subtasks: new ObservableCollection<Models.Substask>()
                     {
-                        "Subtarefa 3",
-                        "Subtarefa 4",
-                        "Subtarefa 5",
-                        "Subtarefa 6",
-                        "Subtarefa 7",
+                        new Models.Substask() { Name="Subtarefa 3", IsChecked=true },
+                        new Models.Substask() { Name="Subtarefa 4", IsChecked=true },
+                        new Models.Substask() { Name="Subtarefa 5", IsChecked=false },
+                        new Models.Substask() { Name="Subtarefa 6", IsChecked=true },
+                        new Models.Substask() { Name="Subtarefa 7", IsChecked=true },
                     },
                     notifications: new List<Notifications>()
                     {
@@ -65,10 +65,10 @@ namespace WPFCalendar.ViewModels
                 new Models.Task(
                     id: 3,
                     name: "Tarefa de teste 3",
-                    subtasks: new List<string>()
+                    subtasks: new ObservableCollection<Models.Substask>()
                     {
-                        "Subtarefa 8",
-                        "Subtarefa 9"
+                        new Models.Substask() { Name="Subtarefa 8", IsChecked=false },
+                        new Models.Substask() { Name="Subtarefa 9", IsChecked=true },
                     },
                     notifications: new List<Notifications>()
                     {

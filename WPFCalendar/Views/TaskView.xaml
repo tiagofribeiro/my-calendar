@@ -19,8 +19,8 @@
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <DockPanel>
-                                            <CheckBox />
-                                            <TextBlock Text="{Binding}" />
+                                            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+                                            <TextBlock Text="{Binding Name}" />
                                         </DockPanel>
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
