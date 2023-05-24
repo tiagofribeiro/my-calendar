@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WPFCalendar.Components
 {
     /// <summary>
-    /// Interação lógica para componente de Calendário.
+    /// Interação lógica para List.xam
     /// </summary>
-    public partial class Calendar : UserControl
+    public partial class List : UserControl
     {
-        public Calendar()
+        public List()
         {
             InitializeComponent();
         }

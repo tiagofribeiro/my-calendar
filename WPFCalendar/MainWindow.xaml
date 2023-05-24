@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WPFCalendar"
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:components="clr-namespace:WPFCalendar.Components"
+        xmlns:views="clr-namespace:WPFCalendar.Views"
         mc:Ignorable="d"
         Title="Agendinha" 
         Width="1024"
@@ -18,7 +19,7 @@
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="320"/>
         </Grid.ColumnDefinitions>
 
         <!--Coluna da esquerda-->
@@ -97,7 +98,9 @@
               Height="5" />
 
             <!--Lista de tarefas-->
-            <StackPanel Grid.Row="2" Background="MistyRose" />
+            <ScrollViewer Grid.Row="2">
+                <views:TaskView />
+            </ScrollViewer>
 
 
         </Grid>
