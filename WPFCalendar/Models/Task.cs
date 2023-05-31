@@ -17,13 +17,13 @@ namespace WPFCalendar.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public ObservableCollection<Substask>? Subtasks { get; set; }
+        public ObservableCollection<Subtask>? Subtasks { get; set; }
         public List<Notifications>? Notifications { get; set; }
         public TaskType Type { get; set; }
         public DateTime? Deadline { get; set; }
         public DateTime Created { get; set; }
 
-        public Task(int id, string name, ObservableCollection<Substask>? subtasks, List<Notifications>? notifications, TaskType type, DateTime? deadline)
+        public Task(int id, string name, ObservableCollection<Subtask>? subtasks, List<Notifications>? notifications, TaskType type, DateTime? deadline)
         {
             Id = id;
             Name = name;
@@ -36,7 +36,7 @@ namespace WPFCalendar.Models
 
     }
 
-    class Substask : BaseNotifyPropertyChange
+    public class Subtask : BaseNotifyPropertyChange
     {
         private string _name = String.Empty;
         private bool _isChecked;

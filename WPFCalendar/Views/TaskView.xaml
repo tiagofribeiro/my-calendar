@@ -14,18 +14,7 @@
                 <components:Card Loaded="Card_Loaded">
                     <StackPanel>
                         <TextBlock Text="{Binding Name}" FontSize="20"/>
-                        <Expander>
-                            <ListView ItemsSource="{Binding Subtasks}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <DockPanel>
-                                            <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
-                                            <TextBlock Text="{Binding Name}" />
-                                        </DockPanel>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </Expander>
+                        <components:List ListData="{Binding Subtasks}"/>
                     </StackPanel>
                 </components:Card>
             </DataTemplate>

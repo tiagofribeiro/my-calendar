@@ -35,7 +35,7 @@ namespace WPFCalendar.Views
         }
 
         /// <summary>
-        /// É acionado sempre que o componente é carregado na tela.
+        /// É acionado sempre que o componente é carregado.
         /// </summary>
         /// <param name="sender">Componente</param>
         /// <param name="e">Argumentos de RoutedEvent</param>

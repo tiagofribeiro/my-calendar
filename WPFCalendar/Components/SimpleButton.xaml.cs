@@ -21,7 +21,7 @@ namespace WPFCalendar.Components
     /// </summary>
     public partial class SimpleButton : UserControl
     {
-        // DependencyProperty - propriedades dinâmicas (dependentes) de um controle
+        // DependencyProperty - propriedades dependentes de um controle
         public static readonly DependencyProperty ButtonTextProperty = DependencyProperty.Register(
                 name: "ButtonText",
                 propertyType: typeof(string),
