@@ -14,7 +14,7 @@
                 <components:Card Loaded="Card_Loaded">
                     <StackPanel>
                         <TextBlock Text="{Binding Name}" FontSize="20"/>
-                        <components:List ListData="{Binding Subtasks}"/>
+                        <components:List HideCheck="True" ListData="{Binding Subtasks}"/>
                     </StackPanel>
                 </components:Card>
             </DataTemplate>

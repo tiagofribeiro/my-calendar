@@ -42,7 +42,7 @@ namespace WPFCalendar.Views
         private void Card_Loaded(object sender, RoutedEventArgs e)
         {
             Card? card = (Card)sender;
-            object? taskItem = (sender as FrameworkElement)?.DataContext;
+            object taskItem = (sender as FrameworkElement).DataContext;
 
             card.CardColor = _tagColors[key: (TaskType)taskItem.GetType().GetProperty("Type").GetValue(taskItem, null)];
         }

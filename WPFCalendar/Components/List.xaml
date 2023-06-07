@@ -7,12 +7,14 @@
              xmlns:local="clr-namespace:WPFCalendar.Components"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <x:Code>
-    <![CDATA[
-        // Código C#
-        // if else
-    ]]>
-    </x:Code>
+    <UserControl.Resources>
+        <DataTemplate x:Key="CheckedList">
+            
+        </DataTemplate>
+        <DataTemplate x:Key="PlainList">
+            
+        </DataTemplate>
+    </UserControl.Resources>
     <Expander>
         <ListView ItemsSource="{Binding ListData, ElementName=list}">
             <ListView.ItemTemplate>

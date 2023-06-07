@@ -19,11 +19,11 @@ using WPFCalendar.Models;
 namespace WPFCalendar.Components
 {
     /// <summary>
-    /// Interação lógica para List.xam
+    /// Interação lógica para lista
     /// </summary>
     public partial class List : UserControl
     {
-        public static readonly DependencyProperty ListDataProperty = DependencyProperty.Register(
+        private static readonly DependencyProperty ListDataProperty = DependencyProperty.Register(
             name: "ListData",
             propertyType: typeof(ObservableCollection<Subtask>),
             ownerType: typeof(List),
@@ -35,9 +35,31 @@ namespace WPFCalendar.Components
             set { SetValue(ListDataProperty, value); }
         }
 
+        private static readonly DependencyProperty HideCheckProperty = DependencyProperty.Register(
+            name: "HideCheck",
+            propertyType: typeof(bool),
+            ownerType: typeof(List),
+            typeMetadata: new FrameworkPropertyMetadata(false, new PropertyChangedCallback(HideCheck_Changed)));
+
+        public bool HideCheck
+        {
+            get { return (bool)GetValue(HideCheckProperty); }
+            set { SetValue(HideCheckProperty, value); }
+        }
+
         public List()
         {
             InitializeComponent();
         }
+
+        private static void HideCheck_Changed(DependencyObject obj, DependencyPropertyChangedEventArgs e)
+        {
+            List list = (List)obj;
+            Debug.WriteLine(list);
+            Debug.WriteLine(e.NewValue);
+            Debug.WriteLine(e.OldValue);
+            Debug.WriteLine("------------------------");
+        }
+
     }
 }
