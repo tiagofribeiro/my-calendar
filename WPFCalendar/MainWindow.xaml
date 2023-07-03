@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCalendar"
-        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:components="clr-namespace:WPFCalendar.Components"
         xmlns:views="clr-namespace:WPFCalendar.Views"
         mc:Ignorable="d"
@@ -31,7 +30,7 @@
                 </Grid.RowDefinitions>
 
                 <!--Calendário-->
-                <components:Calendar />
+                <components:Calendar Grid.Row="0"/>
 
                 <!--Área dos botões-->
                 <Grid Grid.Row="1">
@@ -55,9 +54,7 @@
                     <!--Pomodoro-->
                     <DockPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Button Content="Pomodoro" Width="72" Height="28" Margin="10,0,10,0" />
-                        <Image gif:ImageBehavior.AnimatedSource="/ring.gif" gif:ImageBehavior.AutoStart="True"  Margin="52,0,0,0" Height="52"/>
                     </DockPanel>
-
                 </Grid>
 
             </Grid>

@@ -8,19 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ring.gif" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Assets\Images\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="ring.gif" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
   </ItemGroup>
 
 </Project>
