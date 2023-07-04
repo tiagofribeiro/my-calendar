@@ -18,7 +18,7 @@
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
-            <ColumnDefinition Width="320"/>
+            <ColumnDefinition Width="280"/>
         </Grid.ColumnDefinitions>
 
         <!--Coluna da esquerda-->
@@ -33,22 +33,22 @@
                 <components:Calendar Grid.Row="0"/>
 
                 <!--Área dos botões-->
-                <Grid Grid.Row="1">
+                <Grid Grid.Row="1" ShowGridLines="True">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto" />
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
                     <!--Botões de evento-->
                     <DockPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <components:SimpleButton ButtonText="Evento" ButtonClick="AddEvent" />
-                        <components:SimpleButton ButtonText="Tarefa" ButtonClick="AddTask"/>
+                        <components:SimpleButton ButtonText="Evento" SimpleButtonClick="AddEvent" />
+                        <components:SimpleButton ButtonText="Tarefa" SimpleButtonClick="AddTask"/>
                     </DockPanel>
 
                     <!--Cronômetro-->
-                    <DockPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Button Content="Cronometro" Width="72" Height="28" Margin="10,0,10,0" />
+                    <DockPanel Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                        <views:ChronometerView />
                     </DockPanel>
 
                     <!--Pomodoro-->

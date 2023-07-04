@@ -36,17 +36,17 @@ namespace WPFCalendar.Components
         }
 
         // RoutedEvents - eventos dinâmicos (propagados para a árvore de elementos) de um controle
-        public static readonly RoutedEvent ButtonClickEvent = EventManager.RegisterRoutedEvent(
-            name: "ButtonClick",
+        public static readonly RoutedEvent SimpleButtonClickEvent = EventManager.RegisterRoutedEvent(
+            name: "SimpleButtonClick",
             routingStrategy: RoutingStrategy.Bubble,
             handlerType: typeof(RoutedEventHandler),
             ownerType: typeof(SimpleButton));
 
         // Handler
-        public event RoutedEventHandler ButtonClick
+        public event RoutedEventHandler SimpleButtonClick
         {
-            add { AddHandler(ButtonClickEvent, value); }
-            remove { RemoveHandler(ButtonClickEvent, value); }
+            add { AddHandler(SimpleButtonClickEvent, value); }
+            remove { RemoveHandler(SimpleButtonClickEvent, value); }
         }
 
 
@@ -59,7 +59,7 @@ namespace WPFCalendar.Components
         // Click
         private void OnButtonClick(object sender, RoutedEventArgs e)
         {
-            RaiseEvent(new RoutedEventArgs(ButtonClickEvent));
+            RaiseEvent(new RoutedEventArgs(SimpleButtonClickEvent));
         }
     }
 }

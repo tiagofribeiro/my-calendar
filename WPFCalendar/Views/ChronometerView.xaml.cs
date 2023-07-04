@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPFCalendar.Components
+namespace WPFCalendar.Views
 {
     /// <summary>
-    /// Interação lógica para componente de Cronômetro.
+    /// Interação lógica para ChronometerView.xam
     /// </summary>
-    public partial class Chronometer : UserControl
+    public partial class ChronometerView : UserControl
     {
-        public Chronometer()
+        public ChronometerView()
         {
             InitializeComponent();
         }
